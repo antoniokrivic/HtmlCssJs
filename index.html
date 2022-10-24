@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="primjer.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar">
+       <ul>
+           <li><a class="blue" href="">Početna stranica</a></li>
+           <li><a href="https://en.wikipedia.org/wiki/Osijek">Više</a></li>
+           <li><a href="info.txt">Info</a></li>
+       </ul> 
+    </nav>
+
+    
+    <div class="banner">
+        <h1>Slika grada Osijeka</h1>
+        <img id="osijek" src="osijek.jpg" alt="">
+        <p>Prikaz centra grada</p>
+        <a href="https://en.wikipedia.org/wiki/Osijek"> <button>Više o Osijeku</button></a>
+    </div>
+    
+    
+    <div class="comment-section">
+        <span class="bold" id="comment">Comment section </span>
+        <p class="bold">Komentari</p>
+        <form action=""onsubmit="return false">
+            <input type="text" id="commentInput"/>
+            <button type="submit" onclick="addComment()">Komentiraj</button>
+        </form>
+        <div id="comments">
+            <ul id="commentsList">
+                <li>
+                    <div class="avatar"></div><span>Bok, ovdje Antonio</span>
+                </li>
+                <li>
+                    <div class="avatar"></div><span>Ovo je moja prva web stranica.</span>
+                </li>
+                <li>
+                    <div class="avatar"></div><span>Osijek je super grad.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <table align='center' cellspacing=2 cellpadding=5 id="myTable" border=1>
+        <tr>
+        <th>Ime i prezime</th>
+        <th>Država</th>
+        <th>Godina</th>
+        </tr>
+        
+        <tr id="row1">
+        <td id="name_row1">Ilija Vurbic</td>
+        <td id="country_row1">Hrvatska</td>
+        <td id="age_row1">50</td>
+        <td>
+        <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+        <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+        </td>
+        </tr>
+        
+        <tr id="row2">
+        <td id="name_row2">Zoltan Balko Macsai</td>
+        <td id="country_row2">Mađarska</td>
+        <td id="age_row2">35</td>
+        <td>
+        <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+        <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+        </td>
+        </tr>
+        
+        <tr id="row3">
+        <td id="name_row3">Antonio Krivić</td>
+        <td id="country_row3">Bosna i Hercegovina</td>
+        <td id="age_row3">22</td>
+        <td>
+        <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+        <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+        <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+        </td>
+        </tr>
+        
+        <tr>
+        <td><input type="text" id="new_name"></td>
+        <td><input type="text" id="new_country"></td>
+        <td><input type="text" id="new_age"></td>
+        <td><input type="button" class="add" onclick="add_row();" value="Dodaj"></td>
+        </tr>
+        
+        </table>
+        </div>
+
+
+        <ol id="myList">
+            <li>Zoltan Balko M.</li>
+            <li>Ilija Vurbić</li>
+            <li>Antonio Krivić</li>
+        </ol>
+          <form>
+             <div>
+              <textarea class="example-default-value" placeholder="Napiši novog člana u listu"
+              id="example-textarea" style="width: 400px; height: 50px;"></textarea>
+              </div>
+              <div>
+              <input type="button" value="Dodaj"
+              onclick="addToList()" />
+             </div>
+          </form>
+</body>
+</html>
+
